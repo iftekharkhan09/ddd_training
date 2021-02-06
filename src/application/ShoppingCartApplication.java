@@ -11,9 +11,13 @@ public class ShoppingCartApplication {
     public static void main(String[] args) {
         Cart cart = new Cart();
 
-       Product ipadPro = new Product("IPad Pro", new Price(CompetitorBasedPricing.getPrice("IPad Pro"), Currency.getInstance("INR")));
-       Product heroInkPen = new Product("Hero Ink Pen", new Price(CompetitorBasedPricing.getPrice("Hero Ink Pen"), Currency.getInstance("INR")));
-       Product gmCricketBat = new Product("GM Cricket Bat", new Price(CompetitorBasedPricing.getPrice("GM Cricket Bat"), Currency.getInstance("INR")));
+        Weight grams = new Weight(3, "GRAMS");
+        Product ipadPro = new Product("IPad Pro",
+                new Price(CompetitorBasedPricing.getPrice("IPad Pro"), Currency.getInstance("INR")), grams);
+       Product heroInkPen = new Product("Hero Ink Pen",
+               new Price(CompetitorBasedPricing.getPrice("Hero Ink Pen"), Currency.getInstance("INR")), grams );
+       Product gmCricketBat = new Product("GM Cricket Bat",
+               new Price(CompetitorBasedPricing.getPrice("GM Cricket Bat"), Currency.getInstance("INR")), grams);
 
        Item iPadProItem = new Item(ipadPro);
        Item heroInkPenItem = new Item(heroInkPen);
@@ -27,7 +31,7 @@ public class ShoppingCartApplication {
        Order order = OrderService.getOrder(cart);
 
         System.out.println(order);
-
+        System.out.println(order.getTotalAmount());
        // System.out.println(cart.getItems());
 
        cart.remove(iPadProItem);

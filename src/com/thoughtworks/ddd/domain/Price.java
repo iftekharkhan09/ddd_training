@@ -11,6 +11,10 @@ public class Price {
         this.currency = currency;
     }
 
+    public double getAmount() {
+        return amount;
+    }
+
     public void add(double amount) {
         this.amount = amount;
     }
