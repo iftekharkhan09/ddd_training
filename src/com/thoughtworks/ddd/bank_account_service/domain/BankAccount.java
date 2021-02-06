@@ -1,4 +1,4 @@
-package com.thoughtworks.ddd.domain.bank;
+package com.thoughtworks.ddd.bank_account_service.domain;
 
 import application.Address;
 

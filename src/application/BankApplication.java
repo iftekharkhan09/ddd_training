@@ -1,7 +1,7 @@
 package application;
 
-import com.thoughtworks.ddd.domain.bank.BankAccount;
-import com.thoughtworks.ddd.domain.bank.Customer;
+import com.thoughtworks.ddd.bank_account_service.domain.BankAccount;
+import com.thoughtworks.ddd.customer_service.domain.Customer;
 
 public class BankApplication {
     public static void main(String[] args) {

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="ExternalSystem" externalSystem="GRADLE" externalSystemModuleGroup="org.example" externalSystemModuleType="sourceSet" externalSystemModuleVersion="1.0-SNAPSHOT" linkedProjectId="customer_service:test" linkedProjectPath="$MODULE_DIR$/../../customer_service" rootProjectPath="$MODULE_DIR$/../../customer_service" />
+  <component name="NewModuleRootManager">
+    <output-test url="file://$MODULE_DIR$/../../customer_service/build/classes/java/test" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../customer_service/src/test">
+      <sourceFolder url="file://$MODULE_DIR$/../../customer_service/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../customer_service/src/test/resources" type="java-test-resource" />
+    </content>
+    <orderEntry type="jdk" jdkName="11" jdkType="JavaSDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="customer_service.main" />
+    <orderEntry type="library" name="Gradle: junit:junit:4.12" level="project" />
+    <orderEntry type="library" name="Gradle: org.hamcrest:hamcrest-core:1.3" level="project" />
+  </component>
+  <component name="TestModuleProperties" production-module="customer_service.main" />
+</module>
