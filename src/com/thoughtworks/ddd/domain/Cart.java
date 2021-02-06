@@ -52,8 +52,12 @@ public class Cart {
         return Objects.hash(identifier);
     }
 
-    public void setCheckedOut(boolean checkedOut) {
+    private void setCheckedOut(boolean checkedOut) {
         isCheckedOut = checkedOut;
+    }
+
+    public List<Product> getCheckoutItems(Cart cart) {
+        return this.items.stream().map(Item::getProduct).collect(Collectors.toList());
     }
 }
 

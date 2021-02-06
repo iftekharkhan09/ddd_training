@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 public class OrderService {
     public static Order getOrder(Cart cart) {
-        List<Product> productList = cart.getItems().stream().map(Item::getProduct).collect(Collectors.toList());
+        List<Product> productList = cart.getCheckoutItems(cart);
         return new Order(productList);
     }
 }
