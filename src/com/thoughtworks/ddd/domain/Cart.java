@@ -43,6 +43,10 @@ public class Cart {
         return this.identifier.equals(cart.identifier);
     }
 
+    public void checkout(){
+        this.setCheckedOut(true);
+    }
+
     @Override
     public int hashCode() {
         return Objects.hash(identifier);

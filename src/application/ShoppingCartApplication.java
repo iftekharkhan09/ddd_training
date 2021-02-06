@@ -23,8 +23,7 @@ public class ShoppingCartApplication {
        cart.add(heroInkPenItem);
        cart.add(gmCricketBatItem);
 
-
-       cart.setCheckedOut(true);
+       cart.checkout();
        Order order = OrderService.getOrder(cart);
 
         System.out.println(order);
