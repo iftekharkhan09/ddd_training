@@ -1,16 +1,18 @@
 package com.thoughtworks.ddd.domain.bank;
 
+import application.Address;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Customer {
 
     private String name;
-    private String address;
+    private Address address;
 
     private List<BankAccount> bankAccountList;
 
-    public Customer(String name, String address) {
+    public Customer(String name, Address address) {
         this.name = name;
         this.address = address;
         this.bankAccountList = new ArrayList<>();
@@ -20,7 +22,7 @@ public class Customer {
         this.bankAccountList.add(account);
     }
 
-    public void updateAddress(String address) {
+    public void updateAddress(Address address) {
         this.address = address;
         this.bankAccountList.stream().forEach(account -> account.setCustomerAddress(address));
     }

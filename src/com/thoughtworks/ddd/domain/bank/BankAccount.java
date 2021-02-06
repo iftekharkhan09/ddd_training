@@ -1,17 +1,19 @@
 package com.thoughtworks.ddd.domain.bank;
 
+import application.Address;
+
 public class BankAccount {
 
     private String accountNumber;
-    private String customerAddress;
+    private Address customerAddress;
 
-    public BankAccount(String accountNumber, String customerAddress) {
+    public BankAccount(String accountNumber, Address customerAddress) {
         this.accountNumber = accountNumber;
         this.customerAddress = customerAddress;
     }
 
 
-    public void setCustomerAddress(String customerAddress) {
+    public void setCustomerAddress(Address customerAddress) {
         this.customerAddress = customerAddress;
     }
 
