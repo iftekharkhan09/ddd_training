@@ -1,10 +1,8 @@
 package application;
 
-import com.thoughtworks.ddd.domain.Cart;
-import com.thoughtworks.ddd.domain.Item;
-import com.thoughtworks.ddd.domain.Price;
-import com.thoughtworks.ddd.domain.Product;
+import com.thoughtworks.ddd.domain.*;
 import com.thoughtworks.ddd.domain.domain_service.CompetitorBasedPricing;
+import com.thoughtworks.ddd.domain.domain_service.OrderService;
 
 import java.util.Currency;
 
@@ -25,11 +23,17 @@ public class ShoppingCartApplication {
        cart.add(heroInkPenItem);
        cart.add(gmCricketBatItem);
 
-       System.out.println(cart.getItems());
+
+       cart.setCheckedOut(true);
+       Order order = OrderService.getOrder(cart);
+
+        System.out.println(order);
+
+       // System.out.println(cart.getItems());
 
        cart.remove(iPadProItem);
 
-        System.out.println(cart.getItems());
-        System.out.println(cart.getDeletedItems());
+       // System.out.println(cart.getItems());
+       //  System.out.println(cart.getDeletedItems());
     }
 }

@@ -4,11 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 public class Cart {
     private final UUID identifier;
     private final List<Item> items;
     private final List<Item> deletedItems;
+    private boolean isCheckedOut;
 
     public Cart() {
         identifier = UUID.randomUUID();
@@ -44,6 +46,10 @@ public class Cart {
     @Override
     public int hashCode() {
         return Objects.hash(identifier);
+    }
+
+    public void setCheckedOut(boolean checkedOut) {
+        isCheckedOut = checkedOut;
     }
 }
 
